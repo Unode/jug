@@ -10,10 +10,10 @@ def compfeats(url):
 @TaskGenerator
 def nfold(param, feats):
     print('nfold called: {} {}'.format(param, feats))
-    sleep(3)
+    sleep(.5)
     return param, feats
 
 imgs = ['images/img1.png','images/img2.png']
 feats = [compfeats(img) for img in imgs]
-tenfold = [nfold(param=p,feats=feats) for p in range(10)]
+tenfold = [nfold(param=p,feats=feats) for p in range(1000)]
 
