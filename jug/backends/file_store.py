@@ -535,8 +535,8 @@ class file_keepalive_based_lock(file_based_lock):
         # subprocess module implements a cleanup mechanism that kicks in when
         # a Popen instance is deleted. This prevents leaking subprocesses and
         # avoids having to explicitly block and .wait() for a task to finish
-        del self.monitor
-        self.monitor = None
+        #del self.monitor
+        #self.monitor = None
 
     def get(self):
         '''
